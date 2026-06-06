@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Cinzel:wght@400..700&family=Dancing+Script:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: 'Playfair Display', serif;
+  --font-garamond: 'Cormorant Garamond', serif;
+  --font-cinzel: 'Cinzel', serif;
+  --font-dancing: 'Dancing Script', cursive;
+  
+  --color-primary-rose: #8b3a52;
+  --color-primary-rose-light: #f2c4d0;
+  --color-primary-rose-bg: #fdeef3;
+  --color-gold-accent: #c9a878;
+  --color-gold-light: #e8d4a8;
+  --color-cream-bg: #fffbfc;
+  --color-cream-low: #fff5f8;
+  --color-cream-high: #f9e0e8;
+  --color-cream-highest: #f4c8d8;
+  --color-cream-container: #fff8fa;
+  --color-soft-ink: #3d1a26;
+  --color-soft-ink-variant: #7a3f55;
+  --color-outline-variant: #b07888;
+}
+
+@keyframes flicker {
+  0% { opacity: 0.8; transform: scale(0.95); filter: drop-shadow(0 0 3px #ffe088); }
+  50% { opacity: 1; transform: scale(1.1); filter: drop-shadow(0 0 7px #fed65b); }
+  100% { opacity: 0.85; transform: scale(1); filter: drop-shadow(0 0 4px #ffe088); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(3deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.animate-flicker {
+  animation: flicker 1.8s ease-in-out infinite alternate;
+}
+
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+
+/* ── Whimsical Butterfly & Flower Sprig Animations ── */
+.card-butterfly {
+  position: absolute;
+  top: -22px;
+  right: -16px;
+  width: 58px;
+  height: 50px;
+  pointer-events: none;
+  z-index: 20;
+  animation: flutter 3.8s ease-in-out infinite;
+  transform-origin: center bottom;
+}
+
+@keyframes flutter {
+  0%, 100% { transform: rotate(-5deg) translateY(0); }
+  25%      { transform: rotate(5deg) translateY(-5px); }
+  50%      { transform: rotate(-2deg) translateY(-2px); }
+  75%      { transform: rotate(4deg) translateY(-6px); }
+}
+
+.card-flowers {
+  position: absolute;
+  bottom: -20px;
+  left: -18px;
+  width: 80px;
+  height: 70px;
+  pointer-events: none;
+  z-index: 20;
+}
+
+/* Custom scrollbar matching color theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #fbf9f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #d5c2c1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #815152;
+}
+
