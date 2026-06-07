@@ -12,7 +12,6 @@ const FLOWER_IMAGE = "/assets/images/flower.png";
 
 export default function SymbolsSection() {
   
-  // Default lists transcribed exactly from your screenshots
   const INITIAL_COTILLION = [
     "Trisha Jia Ruado", "Ashton Abaya",      // Couple 1
     "Aareca Legaspi", "Miggy Fadul",        // Couple 2
@@ -62,68 +61,69 @@ export default function SymbolsSection() {
     "Sean Prado", "Trisha Lipago"
   ];
 
-  // Self-correcting state loaders targeting v3 to force-refresh local browser caches
-  const [cotillion, setCotillion] = useState<string[]>(() => {
-    const saved = localStorage.getItem("debut_cotillion_v3");
-    if (saved) {
-      const parsed = JSON.parse(saved);
-      if (parsed.length === 15) return parsed;
-      if (parsed.length < 15) {
-        return [...parsed, ...Array(15 - parsed.length).fill("")];
-      }
-      return parsed.slice(0, 15);
+// Update all 6 state initializers to use "v4"
+const [cotillion, setCotillion] = useState<string[]>(() => {
+  const saved = localStorage.getItem("debut_cotillion_v4"); // Changed to v4
+  if (saved) {
+    const parsed = JSON.parse(saved);
+    if (parsed.length === 15) return parsed;
+    if (parsed.length < 15) {
+      return [...parsed, ...Array(15 - parsed.length).fill("")];
     }
-    return INITIAL_COTILLION;
-  });
+    return parsed.slice(0, 15);
+  }
+  return INITIAL_COTILLION;
+});
 
-  const [treasures, setTreasures] = useState<string[]>(() => {
-    const saved = localStorage.getItem("debut_treasures_v3");
-    return saved ? JSON.parse(saved) : INITIAL_TREASURES;
-  });
+const [treasures, setTreasures] = useState<string[]>(() => {
+  const saved = localStorage.getItem("debut_treasures_v4"); // Changed to v4
+  return saved ? JSON.parse(saved) : INITIAL_TREASURES;
+});
 
-  const [bills, setBills] = useState<string[]>(() => {
-    const saved = localStorage.getItem("debut_bills_v3");
-    return saved ? JSON.parse(saved) : INITIAL_BILLS;
-  });
+const [bills, setBills] = useState<string[]>(() => {
+  const saved = localStorage.getItem("debut_bills_v4"); // Changed to v4
+  return saved ? JSON.parse(saved) : INITIAL_BILLS;
+});
 
-  const [roses, setRoses] = useState<string[]>(() => {
-    const saved = localStorage.getItem("debut_roses_v3");
-    return saved ? JSON.parse(saved) : INITIAL_ROSES;
-  });
+const [roses, setRoses] = useState<string[]>(() => {
+  const saved = localStorage.getItem("debut_roses_v4"); // Changed to v4
+  return saved ? JSON.parse(saved) : INITIAL_ROSES;
+});
 
-  const [candles, setCandles] = useState<string[]>(() => {
-    const saved = localStorage.getItem("debut_candles_v3");
-    return saved ? JSON.parse(saved) : INITIAL_CANDLES;
-  });
+const [candles, setCandles] = useState<string[]>(() => {
+  const saved = localStorage.getItem("debut_candles_v4"); // Changed to v4
+  return saved ? JSON.parse(saved) : INITIAL_CANDLES;
+});
 
-  const [shots, setShots] = useState<string[]>(() => {
-    const saved = localStorage.getItem("debut_shots_v3");
-    return saved ? JSON.parse(saved) : INITIAL_SHOTS;
-  });
+const [shots, setShots] = useState<string[]>(() => {
+  const saved = localStorage.getItem("debut_shots_v4"); // Changed to v4
+  return saved ? JSON.parse(saved) : INITIAL_SHOTS;
+});
 
-  useEffect(() => {
-    localStorage.setItem("debut_cotillion_v3", JSON.stringify(cotillion));
-  }, [cotillion]);
+// Update all 6 useEffect setters to save to "v4"
+useEffect(() => {
+  localStorage.setItem("debut_cotillion_v4", JSON.stringify(cotillion)); // Changed to v4
+}, [cotillion]);
 
-  useEffect(() => {
-    localStorage.setItem("debut_treasures_v3", JSON.stringify(treasures));
-  }, [treasures]);
+useEffect(() => {
+  localStorage.setItem("debut_treasures_v4", JSON.stringify(treasures)); // Changed to v4
+}, [treasures]);
 
-  useEffect(() => {
-    localStorage.setItem("debut_bills_v3", JSON.stringify(bills));
-  }, [bills]);
+useEffect(() => {
+  localStorage.setItem("debut_bills_v4", JSON.stringify(bills)); // Changed to v4
+}, [bills]);
 
-  useEffect(() => {
-    localStorage.setItem("debut_roses_v3", JSON.stringify(roses));
-  }, [roses]);
+useEffect(() => {
+  localStorage.setItem("debut_roses_v4", JSON.stringify(roses)); // Changed to v4
+}, [roses]);
 
-  useEffect(() => {
-    localStorage.setItem("debut_candles_v3", JSON.stringify(candles));
-  }, [candles]);
+useEffect(() => {
+  localStorage.setItem("debut_candles_v4", JSON.stringify(candles)); // Changed to v4
+}, [candles]);
 
-  useEffect(() => {
-    localStorage.setItem("debut_shots_v3", JSON.stringify(shots));
-  }, [shots]);
+useEffect(() => {
+  localStorage.setItem("debut_shots_v4", JSON.stringify(shots)); // Changed to v4
+}, [shots]);
 
   const handleNameChange = (
     listName: "cotillion" | "treasures" | "bills" | "roses" | "candles" | "shots",
