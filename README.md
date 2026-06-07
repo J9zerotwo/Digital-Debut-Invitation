@@ -67,8 +67,7 @@ To run this project locally on your machine:
 
 1.  Clone the repository:
 
-    git clone https://github.com/your-username/jia-18th-debutante-ball.git
-    cd jia-18th-debutante-ball
+    git clone [https://github.com/J9zerotwo/jia-18th-debutante-ball.git](https://github.com/J9zerotwo/Digital-Debut-Invitation)
 
 2.  Install dependencies:
 
@@ -78,7 +77,7 @@ To run this project locally on your machine:
 
     npm run dev
 
-    The server will run locally at http://localhost:5173/.
+    The server will run locally at http://localhost:3000/.
 
 4.  Build for production:
 
