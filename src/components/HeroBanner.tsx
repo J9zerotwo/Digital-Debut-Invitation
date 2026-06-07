@@ -4,6 +4,7 @@
  */
 
 import { useState, useEffect } from "react";
+import { Sparkles } from "lucide-react";
 import { motion } from "motion/react";
 
 export default function HeroBanner() {
@@ -27,18 +28,16 @@ export default function HeroBanner() {
       id="hero"
     >
       {/* 
-        Full-bleed background cover centered at the top. 
-        This keeps the entire photo fully filling the background beautifully.
+        Responsive Background Positioning:
+        - bg-cover bg-top: Fills vertical screen boundaries nicely on mobile.
+        - md:bg-contain md:bg-no-repeat md:bg-center: Prevents cropping on wide desktop monitors.
       */}
       <div 
-        className="absolute inset-0 bg-cover bg-top z-0"
+        className="absolute inset-0 bg-cover bg-top md:bg-contain md:bg-no-repeat md:bg-center z-0"
         style={{ backgroundImage: `url('/assets/images/trish.png')` }}
       />
       
-      {/* 
-        Seamless Bottom-Only Transition:
-        - Fades directly to your soft blush pink (#fcedf0) only at the very bottom edge.
-      */}
+      {/* Soft, gentle bottom transition */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent via-[92%] to-[#fcedf0] pointer-events-none z-1" />
 
       {/* Floating Petals Layer */}
@@ -60,7 +59,7 @@ export default function HeroBanner() {
         ))}
       </div>
 
-      {/* Custom Styles Injection (Fonts, Petals, and Glow Shadows) */}
+      {/* Custom Styles Injection */}
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:wght@600;700&display=swap');
         
@@ -105,7 +104,6 @@ export default function HeroBanner() {
           }
         }
       `}</style>
-
     </div>
   );
 }
