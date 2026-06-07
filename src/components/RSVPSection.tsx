@@ -60,7 +60,7 @@ export default function RSVPSection() {
             </a>
             
             <p className="text-[20px] text-soft-ink-variant font-garamond">
-            Kindly confirm your attendance no later than <strong> June 20, 2026.</strong>
+            Kindly confirm your attendance no later than <strong> June 21, 2026.</strong>
             </p>
           </div>
 

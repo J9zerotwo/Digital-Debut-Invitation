@@ -17,7 +17,7 @@ export default function SymbolsSection() {
     "Trisha Jia Ruado", "Ashton Abaya",      // Couple 1
     "Aareca Legaspi", "Miggy Fadul",        // Couple 2
     "Amanda Cortez", "Andrei Alcober",      // Couple 3
-    "Nikkie Dullate", "Jimuel Angeles",      // Couple 4
+    "Nikkie Dullate", "Rafael Reynes",      // Couple 4
     "Elisse Mangubat", "Sean Prado",        // Couple 5
     "", "", "", "", "" // Padded up to 15 elements
   ];
@@ -25,7 +25,7 @@ export default function SymbolsSection() {
   const INITIAL_TREASURES = [
     "Anne Bustamante", "Martha Ponce", "Erika Lagata", "Hanah Laurenciano",
     "Aliane Estevez", "Cristina Bola", "Anyah Aquino", "Trisha Nicolas",
-    "Ilegna Regio", "Jimuel Angeles", "Tristan Yap", "Miggy Fadul",
+    "Ilegna Regio", "Amanda Cortez", "Tristan Yap", "Miggy Fadul",
     "Aareca Legaspi", "Cyrene Ho", "Alexandra Paliza", "Elisse Mangubat",
     "Marcuisha Matthea", "Nikkie Dullate"
   ];
@@ -34,7 +34,7 @@ export default function SymbolsSection() {
     "Lorena Bustamante", "Richard Mortos", "Celenia Morse", "Jinky Ordelas",
     "Monica Rodriguez", "Elisa Lagata", "Brando Ponce", "Analiza Caliboso",
     "Jamie Santander", "Criselda Urbano Lopez", "Mar Urbano", "Lilibeth Urbano Yap",
-    "Rita Soriano", "Jing Alviar", "Jaja Alviar", "Marj Barnachea",
+    "Jovy Garcia", "Olive Diza", "Jaja Alviar", "Marj Barnachea",
     "Mercy Laurenciano", "Lotlot Ordelas"
   ];
 

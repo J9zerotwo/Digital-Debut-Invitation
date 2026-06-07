@@ -39,6 +39,10 @@ export default function GentleNoteCard() {
           <p className="border-b border-outline-variant/10 pb-3 text-center text-soft-ink-variant font-medium">
             Please <strong>answer the RSVP</strong> to confirm your <strong>attendance and secure your seat</strong> for this special celebration.
           </p>
+
+          <p className="border-b border-outline-variant/10 pb-3 text-center text-soft-ink-variant font-medium">
+            <strong>Please avoid arriving late, especially those who are part of the 18 traditions.</strong>
+          </p>
           
          <p className="border-b border-outline-variant/10 pb-3 text-center text-soft-ink-variant font-medium">
             <strong>Guests are graciously requested to arrive at 5:30 PM</strong>
